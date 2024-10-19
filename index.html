@@ -4,13 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pong Game</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-
+    <link rel="stylesheet" href="./assets/css/style.css">    
 </head>
 <body>
-    <button onclick="gameLoop()">Iniciar el Juego</button>
-    <button onclick="stopGame()">Detener el Juego</button>
     <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div>
+        <button id="startButton">Start Game</button>
+        <button id="stopButton">Stop Game</button>
+        <label for="difficulty">Select Difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <label for="backgroundSelect">Select Background:</label>
+        <select id="backgroundSelect">
+            <option value="black">Black</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+    </div>
+    <div class="score" id="scoreBoard">Player: 0 | Computer: 0</div>
+
     <script src="./assets/js/pong.js"></script>
 </body>
 </html>
+
